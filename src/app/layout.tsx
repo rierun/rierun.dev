@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
-const NotoSansJP = Noto_Sans_JP({subsets: ["latin"], weight: ["400", "700"]});
+const NotoSansJP = Noto_Sans_JP({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "rierun.dev",
