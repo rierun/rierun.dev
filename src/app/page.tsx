@@ -1,12 +1,15 @@
 export default function Page() {
   return (
-    <main className="min-h-screen">
-      <div className="border-solid border-b-2 border-b-black py-5">
-        <h1 className="text-center font-bold text-5xl">rierun.dev</h1>
-      </div>
-      <div className="text-center mt-5">
-        <p>This domain is currently in the process of creating a site.</p>
-        <p>このドメインは現在サイトを制作中です。</p>
+    <main className="h-[calc(100vh_-_110px)] px-3 py-5 text-white">
+      <div className="h-full flex justify-end items-end bg-[#5E838E] rounded-3xl pb-5 pr-9">
+        <div className="flex flex-col text-right">
+          <div className="text-4xl md:text-5xl">
+            <p>rierun</p>
+          </div>
+          <div>
+            <h1 className="font-bold text-6xl md:text-9xl">りえるん</h1>
+          </div>
+        </div>
       </div>
     </main>
   );
