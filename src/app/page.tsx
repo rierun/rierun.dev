@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ホーム | rierun.dev",
+};
+
 export default function Page() {
   return (
     <main className="h-[calc(100vh_-_110px)] px-3 py-5 text-white">
