@@ -6,7 +6,7 @@ const MPlus1p = M_PLUS_1p({ weight: ["400", "700"], subsets: ["latin"] });
 export default function Footer() {
   return (
     <footer className={"bg-[#5E838E] text-white " + MPlus1p.className}>
-      <div className="h-full flex flex-row justify-center md:justify-between items-center px-5 md:px-12 py-5">
+      <div className="h-full flex flex-col gap-2 md:flex-row justify-center md:justify-between items-center px-5 md:px-12 py-5">
         <div className="text-6xl font-bold">
           rierun<span className="text-5xl text-[#344449]">.dev</span>
         </div>
@@ -22,9 +22,6 @@ export default function Footer() {
           </div>
           <div>
             <Link href="/blog">Blog</Link>
-          </div>
-          <div>
-            <Link href="/contact">Contact</Link>
           </div>
         </div>
       </div>
