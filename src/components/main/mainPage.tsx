@@ -4,7 +4,7 @@ import React from "react";
 import { M_PLUS_1p } from "next/font/google";
 
 const MPlus1p = M_PLUS_1p({ weight: ["400", "700"], subsets: ["latin"] });
-
+// 動いてないのに暑いよ~
 export default function MainPage({
   children,
   title,
@@ -26,7 +26,7 @@ export default function MainPage({
         >
           <h1>{title}</h1>
         </div>
-        <div className="bg-gray-200 py-2 pl-28">
+        <div className={breadcrumbs && "bg-gray-200 py-2 pl-28"}>
           {breadcrumbs && (
             <div className="flex flex-row gap-2 items-center text-xl text-gray-600">
               {breadcrumbs.map(

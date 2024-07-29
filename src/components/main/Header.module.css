@@ -1,0 +1,10 @@
+.drawerMenu {
+  transition: all 0.3s ease-in-out;
+  right: 0;
+  transform: translate(200px);
+  position: fixed;
+}
+
+.drawerMenuIsOpen {
+  transform: translate(0);
+}

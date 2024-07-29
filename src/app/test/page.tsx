@@ -3,8 +3,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Test Page",
+  description: "This is a test page!",
 };
-
+// 踊ってない夜は知らない~
 export default function Page() {
   const breadcrumbTrail: BreadcrumbTrail[] = [
     {
