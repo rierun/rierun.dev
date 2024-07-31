@@ -3,7 +3,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Tools",
-  description: "りえるんについて!",
+  description: "ぶろぐ!",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function Page() {

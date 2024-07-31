@@ -9,6 +9,9 @@ const MPlus1p = M_PLUS_1p({ weight: ["400", "700"], subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "About",
   description: "りえるんについて!",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function Page() {
