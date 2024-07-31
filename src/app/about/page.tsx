@@ -29,10 +29,12 @@ export default function Page() {
   return (
     <MainPage title="About">
       <div className={MPlus1p.className}>
-        <div className="flex flex-row h-96">
+        <div className="flex flex-col xl:flex-row md:h-96 gap-5 xl:gap-0">
           <div className="w-full">
             <span className="text-2xl">高校生</span>
-            <h2 className="text-8xl font-bold">霜月 りえるん</h2>
+            <h2 className="text-4xl md:text-8xl font-bold text-nowrap pr-5">
+              霜月 りえるん
+            </h2>
             <p className="mt-5">
               すきかってにのんびりしている高校生です! <br />
               このサイトには、自分が作ったガラクタを置いたり、
@@ -40,11 +42,11 @@ export default function Page() {
               ブログなどを更新したいと思っています!
             </p>
           </div>
-          <div>
+          <div className="h-full">
             <Image
               src={Image1}
               alt="りえるん"
-              className="object-cover object-center h-96"
+              className="object-cover object-right md:object-center h-96"
             ></Image>
           </div>
         </div>
