@@ -46,7 +46,7 @@ export default function MainPage({
             </div>
           )}
         </div>
-        <div className="text-2xl px-12 md:px-28 pt-5">{children}</div>
+        <div className="text-2xl px-12 md:px-28 pt-8 pb-16">{children}</div>
       </main>
       <Footer />
     </>
