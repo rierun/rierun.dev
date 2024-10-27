@@ -35,10 +35,10 @@ async function getBlogRes(id: string) {
   return res;
 }
 
-export async function GET(req: Request, content: { params: { id: string } }) {
-  const { id } = content.params;
+export async function GET(req: Request, {params}: {params: Promise<{blodId: string}>}) {
+  const { blodId } = await params;
 
-  const res = await getBlogRes(id);
+  const res = await getBlogRes(blodId);
 
   if (!res.ok) {
     console.error("Failed to fetch data", res);

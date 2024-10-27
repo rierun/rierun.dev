@@ -1,11 +1,9 @@
 import { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/main/Header";
 import NextTopLoader from "nextjs-toploader";
-import Footer from "@/components/main/Footer";
+import { MPlus2, NotoSansJP } from "@/utils/font";
 
-const NotoSansJP = Noto_Sans_JP({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rierun.dev"),
@@ -42,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={NotoSansJP.className}>
+      <body className={`${NotoSansJP.variable} ${MPlus2.variable}`}>
         <NextTopLoader color="#5e838e" />
         <Header />
         {children}

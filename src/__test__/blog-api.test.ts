@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { GET as blogListGet } from "@/app/api/v1/blog/list/route";
-import { GET as blogGet } from "@/app/api/v1/blog/get/route";
+import { GET as blogGet } from "@/app/api/v1/blog/get/[blogId]/route";
 
 describe("GET /api/v1/blog/list", () => {
   beforeEach(() => {

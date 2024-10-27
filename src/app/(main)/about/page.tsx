@@ -2,9 +2,6 @@ import MainPage from "@/components/main/mainPage";
 import { Metadata } from "next";
 import Image1 from "@/assets/img/VRChat_2024-07-30_16-46-04.027_1920x1080.png";
 import Image from "next/image";
-import { M_PLUS_1p } from "next/font/google";
-
-const MPlus1p = M_PLUS_1p({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "About",
@@ -28,7 +25,7 @@ export default function Page() {
 
   return (
     <MainPage title="About">
-      <div className={MPlus1p.className}>
+      <div className="font-m-plus">
         <div className="flex flex-col xl:flex-row md:h-96 gap-5 xl:gap-0">
           <div className="w-full">
             <span className="text-2xl">高校生</span>
