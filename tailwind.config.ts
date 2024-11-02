@@ -11,6 +11,9 @@ const config: Config = {
       fontFamily: {
         "m-plus": "var(--font-m-plus-2)",
         "noto-sans": "var(--font-noto-sans-jp)"
+      },
+      colors: {
+        "primary": "var(--color-primary)",
       }
     },
   },

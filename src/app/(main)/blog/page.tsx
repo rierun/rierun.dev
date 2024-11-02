@@ -1,15 +1,18 @@
 import MainPage from "@/components/main/mainPage";
+import { getBlogList } from "@/utils/blog/getBlogList";
 import { Metadata } from "next";
+import { DateTime } from "luxon";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Tools",
+  title: "Blog",
   description: "ぶろぐ!",
   alternates: {
     canonical: "/blog",
   },
 };
 
-export default function Page() {
+export default async function Page() {
   const breadcrumbTrail: BreadcrumbTrail[] = [
     {
       name: "Home",
@@ -21,9 +24,31 @@ export default function Page() {
     },
   ];
 
+  const blogList = await getBlogList();
+
   return (
     <MainPage breadcrumbs={breadcrumbTrail} title="Blog">
-      <div>WIP</div>
+      <div>
+        {(blogList.data &&
+          blogList.data.map((post) => (
+            <Link key={post.id} href={`/blog/${post.id}`}>
+              <div className="border-b-2 border-solid border-b-primary flex flex-col gap-2 py-2 px-5">
+                <h2 className="text-4xl">{post.title}</h2>
+                <div className="flex flex-row gap-5 justify-between">
+                  <ul>
+                    {post.tags.nodes &&
+                      post.tags.nodes.map((tag) => (
+                        <li key={tag.id}>{tag.name}</li>
+                      ))}
+                  </ul>
+                  <p>
+                    {DateTime.fromISO(post.date).toFormat("yyyy年MM月dd日")}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          ))) || <p>Loading...</p>}
+      </div>
     </MainPage>
   );
 }

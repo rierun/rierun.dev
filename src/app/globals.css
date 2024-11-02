@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #5e838e;
+}
+
 html body {
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -26,4 +31,41 @@ html body {
 body {
   color: #010101;
   margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+th {
+  background-color: #5e838e;
+  color: #fff;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+blog-content ul {
+  list-style-type: circle;
+  padding: 0;
+}
+
+blockquote {
+  border-left: 5px solid #5e838e;
+  margin: 1em 0;
+  padding: 0.25rem 1em;
 }
