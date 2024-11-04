@@ -3,7 +3,8 @@ import "./globals.css";
 import Header from "@/components/main/Header";
 import NextTopLoader from "nextjs-toploader";
 import { MPlus2, NotoSansJP } from "@/utils/font";
-
+import SmoothScroller from "@/components/lenis/smoothScroll";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rierun.dev"),
@@ -42,6 +43,9 @@ export default function RootLayout({
     <html lang="ja">
       <body className={`${NotoSansJP.variable} ${MPlus2.variable}`}>
         <NextTopLoader color="#5e838e" />
+        <Suspense>
+          <SmoothScroller />
+        </Suspense>
         <Header />
         {children}
       </body>

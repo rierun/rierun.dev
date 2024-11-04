@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,9 +12,13 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "@studio-freight/tempus": "^0.0.44",
+    "gsap": "^3.12.5",
     "html-react-parser": "^5.1.18",
+    "lenis": "^1.1.14",
     "luxon": "^3.5.0",
-    "next": "15.0.1",
+    "next": "15.0.2",
     "nextjs-toploader": "^1.6.12",
     "prismjs": "^1.29.0",
     "react": "^18",
@@ -24,6 +28,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.1",
     "@testing-library/react": "^16.0.1",
+    "@types/gsap": "^3.0.0",
     "@types/jest": "^29.5.13",
     "@types/luxon": "^3.4.2",
     "@types/node": "^20",

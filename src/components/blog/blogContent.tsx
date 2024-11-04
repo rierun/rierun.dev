@@ -6,5 +6,5 @@ import { useEffect } from "react";
 export default function BlogContent({ content }: { content: string }) {
   const contentHtml = HTMLReactParser(content);
 
-  return <div className="blog-content">{contentHtml}</div>;
+  return <article className="blog-content">{contentHtml}</article>;
 }

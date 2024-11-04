@@ -45,8 +45,6 @@ export async function getBlogList() {
 
     const json = await res.json();
 
-    console.log(json);
-
     const data = json.data.posts.nodes as postList;
 
     return { code: 200, message: "Success", data };

@@ -38,24 +38,22 @@ export default async function Page({
 
   return (
     <MainPage breadcrumbs={breadcrumbTrail} title={title}>
-      <div>
-        {blogList.data ? (
-          <>
-            <div className="border-b-2 border-solid border-b-primary text-xl pb-2 flex flex-row justify-between">
-              <p>著者: {blogList.data.author.node.nicename}</p>
-              <p>
-                公開日時:{" "}
-                {DateTime.fromISO(blogList.data.date).toFormat(
-                  "yyyy年MM月dd日 hh:mm",
-                )}
-              </p>
-            </div>
-            <BlogContent content={blogList.data.content} />
-          </>
-        ) : (
-          <div></div>
-        )}
-      </div>
+      {blogList.data ? (
+        <article>
+          <section className="border-b-2 border-solid border-b-primary text-xl pb-2 flex flex-row justify-between">
+            <p>著者: {blogList.data.author.node.nicename}</p>
+            <p>
+              公開日時:{" "}
+              {DateTime.fromISO(blogList.data.date).toFormat(
+                "yyyy年MM月dd日 hh:mm",
+              )}
+            </p>
+          </section>
+          <BlogContent content={blogList.data.content} />
+        </article>
+      ) : (
+        <div></div>
+      )}
     </MainPage>
   );
 }

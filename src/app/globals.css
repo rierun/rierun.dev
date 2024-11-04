@@ -59,7 +59,7 @@ hr {
   margin-bottom: 1em;
 }
 
-blog-content ul {
+.blog-content > ul {
   list-style-type: circle;
   padding: 0;
 }
