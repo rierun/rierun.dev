@@ -22,7 +22,7 @@ export default function RootPage() {
       </section>
       <section className="root-page-section mt-5">
         <div className="px-5 py-5 text-[#010101] bg-gray-100 rounded-xl flex flex-col gap-4">
-          <h2 className="text-4xl font-bold">高校生です。つまり、覚え放題。</h2>
+          <h2 className="text-4xl font-bold">高校生です。なので、覚え放題。</h2>
           <p className="text-2xl">
             時間は有限です。その為限られた時間でしか覚えるしかありませんが、僕には時間がたくさんあります。
             <br />
