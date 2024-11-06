@@ -28,14 +28,14 @@ export default async function Page() {
 
   return (
     <MainPage breadcrumbs={breadcrumbTrail} title="Blog">
-      <article>
+      <div>
         {(blogList.data &&
           blogList.data.map((post) => (
-            <article
-              className="border-b-2 border-solid border-b-primary flex flex-col gap-2 py-2 px-5"
-              key={post.id}
-            >
-              <Link href={`/blog/${post.id}`}>
+            <article key={post.id}>
+              <Link
+                className="border-b-2 border-solid border-b-primary flex flex-col py-2 px-5"
+                href={`/blog/${post.id}`}
+              >
                 <h2 className="text-4xl">{post.title}</h2>
                 <div className="flex flex-row gap-5 justify-between">
                   <ul>
@@ -51,7 +51,7 @@ export default async function Page() {
               </Link>
             </article>
           ))) || <p>Loading...</p>}
-      </article>
+      </div>
     </MainPage>
   );
 }

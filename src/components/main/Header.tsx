@@ -1,25 +1,7 @@
 import Link from "next/link";
+import HeaderNav from "./HeaderNav";
 
 export default function Header() {
-  let navItems = [
-    {
-      name: "Home",
-      href: "/",
-    },
-    {
-      name: "About",
-      href: "/about",
-    },
-    {
-      name: "Tools",
-      href: "/tools",
-    },
-    {
-      name: "Blog",
-      href: "/blog",
-    },
-  ];
-
   return (
     <header className={"font-m-plus h-[110px]"}>
       <div className="h-full flex flex-col md:flex-row justify-center md:justify-between items-center px-5 md:px-12 pb-2 md:pb-0">
@@ -30,13 +12,7 @@ export default function Header() {
           </Link>
         </div>
         <div>
-          <nav className="flex flex-row gap-4 font-normal md:font-bold text-2xl">
-            {navItems.map((navItem, index) => (
-              <div key={index}>
-                <Link href={navItem.href}>{navItem.name}</Link>
-              </div>
-            ))}
-          </nav>
+          <HeaderNav />
         </div>
       </div>
     </header>

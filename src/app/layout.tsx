@@ -5,6 +5,7 @@ import NextTopLoader from "nextjs-toploader";
 import { MPlus2, NotoSansJP } from "@/utils/font";
 import SmoothScroller from "@/components/lenis/smoothScroll";
 import { Suspense } from "react";
+import Mouse from "@/components/mouse/mouse";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rierun.dev"),
@@ -45,6 +46,7 @@ export default function RootLayout({
         <NextTopLoader color="#5e838e" />
         <Suspense>
           <SmoothScroller />
+          <Mouse />
         </Suspense>
         <Header />
         {children}

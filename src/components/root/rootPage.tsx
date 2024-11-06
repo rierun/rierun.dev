@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 export default function RootPage() {
   useEffect(() => {
-    gsap.set(".root-page-section", { autoAlpha: 1 });
+    gsap.to(".root-page-section", { autoAlpha: 1 });
   });
 
   return (
