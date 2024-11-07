@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/main/Header";
 import NextTopLoader from "nextjs-toploader";
-import Footer from "@/components/main/Footer";
-
-const NotoSansJP = Noto_Sans_JP({ weight: ["400", "700"], subsets: ["latin"] });
+import { MPlus2, NotoSansJP } from "@/utils/font";
+import SmoothScroller from "@/components/lenis/smoothScroll";
+import { Suspense } from "react";
+import Mouse from "@/components/mouse/mouse";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rierun.dev"),
@@ -42,8 +42,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={NotoSansJP.className}>
+      <body className={`${NotoSansJP.variable} ${MPlus2.variable}`}>
         <NextTopLoader color="#5e838e" />
+        <Suspense>
+          <SmoothScroller />
+          <Mouse />
+        </Suspense>
         <Header />
         {children}
       </body>
