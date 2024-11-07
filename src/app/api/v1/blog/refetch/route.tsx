@@ -3,12 +3,16 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request): Promise<NextResponse> {
   try {
-    const reqJson = await req.json();
-    const { id } = reqJson;
+    const reqText = await req.text();
 
-    console.log("Refetching blog post with id: ", id);
+    console.log("Refetching blog data");
     revalidatePath("/blog");
-    revalidatePath(`/blog/${id}`);
+
+    const reqJson = JSON.parse(reqText);
+    if (reqJson.post) {
+      console.log(`Refetching blog post ${reqJson.post.ID}`);
+      revalidatePath(`/blog/${reqJson.post.ID}`);
+    }
   } catch (e) {
     console.error(e);
     return NextResponse.json(

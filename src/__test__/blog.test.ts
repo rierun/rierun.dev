@@ -8,6 +8,7 @@ describe("getBlogData", () => {
 
   beforeEach(() => {
     mockFetch.mockClear();
+    process.env = { ...process.env };
   });
 
   it("should return data when fetch is successful", async () => {
@@ -27,6 +28,9 @@ describe("getBlogData", () => {
       }),
     };
     mockFetch.mockResolvedValueOnce(mockResponse as Response);
+
+    process.env.WPGRAPHQL_TOKEN = "token";
+    process.env.WPGRAPHQL_URL = "http://localhost/graphql";
 
     const result = await getBlogData("1");
 
@@ -66,6 +70,7 @@ describe("getBlogList", () => {
 
   beforeEach(() => {
     mockFetch.mockClear();
+    process.env = { ...process.env };
   });
 
   it("should return data when fetch is successful", async () => {
@@ -93,6 +98,9 @@ describe("getBlogList", () => {
       }),
     };
     mockFetch.mockResolvedValueOnce(mockResponse as Response);
+
+    process.env.WPGRAPHQL_TOKEN = "token";
+    process.env.WPGRAPHQL_URL = "http://localhost/graphql";
 
     const result = await getBlogList();
 
