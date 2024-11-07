@@ -1,4 +1,8 @@
 async function getBlogListRes() {
+  if (!process.env.WPGRAPHQL_URL || !process.env.WPGRAPHQL_TOKEN) {
+    throw new Error("Environment variables not set");
+  }
+
   const res = await fetch(process.env.WPGRAPHQL_URL!, {
     method: "POST",
     headers: {
