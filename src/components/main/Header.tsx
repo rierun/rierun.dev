@@ -8,7 +8,7 @@ export default function Header() {
         <div className="text-6xl text-[#323232] px-2 py-1 font-bold transition-all duration-500 rounded-sm hover:text-[#4b4d67]">
           <Link href="/">
             rierun
-            <span className="text-5xl text-[#5e838e]">.dev</span>
+            <span className="text-5xl text-primary">.dev</span>
           </Link>
         </div>
         <div>

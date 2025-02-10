@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+const dev = process.env.NODE_ENV !== "production";
+
 function authMiddleware(request: NextRequest) {
   if (request.url.startsWith("/api")) {
     const auth = request.headers.get("authorization");

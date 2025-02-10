@@ -15,7 +15,7 @@ export default function MainPage({
   return (
     <>
       <main className="min-h-screen">
-        <div className="font-m-plus h-72 bg-[#5E838E] text-7xl font-bold text-white flex flex-col justify-center pl-12 md:pl-28">
+        <div className="font-m-plus h-72 bg-primary text-7xl font-bold text-white flex flex-col justify-center pl-12 md:pl-28">
           <h1>{title}</h1>
         </div>
         <div className={breadcrumbs && "bg-gray-200 py-2 pl-12 md:pl-28"}>
