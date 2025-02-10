@@ -16,12 +16,6 @@ function authMiddleware(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
   }
-
-  if (!request.url.startsWith("/")) {
-    if (!dev) {
-      return NextResponse.redirect("/");
-    }
-  }
   return NextResponse.next();
 }
 
