@@ -9,10 +9,12 @@ export default function Mouse() {
     if (window === undefined) return;
 
     const handleMouseMove = (event: MouseEvent) => {
+      mouseRef.current?.style.setProperty("opacity", "1");
       if (mouseRef.current) {
         gsap.to(mouseRef.current, {
           x: event.clientX,
           y: event.clientY,
+          scale: 1,
           duration: 0.75,
           ease: "power3.out",
         });
@@ -66,6 +68,7 @@ export default function Mouse() {
         height: "80px",
         pointerEvents: "none",
         transform: "translate(-50%, -50%)",
+        opacity: 0,
       }}
     >
       <svg

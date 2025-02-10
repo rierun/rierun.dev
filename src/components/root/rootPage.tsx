@@ -10,7 +10,7 @@ export default function RootPage() {
 
   return (
     <main className="h-[calc(100vh_-_110px)] px-3 pb-5 ">
-      <section className="root-page-section h-full flex justify-end items-end bg-[#5E838E] rounded-3xl pb-5 pr-9 text-white">
+      <section className="root-page-section h-full flex justify-end items-end bg-primary rounded-3xl pb-5 pr-9 text-white">
         <div className="flex flex-col text-right">
           <div className="text-4xl md:text-5xl">
             <p>rierun</p>

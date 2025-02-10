@@ -4,7 +4,15 @@ import Link from "next/link";
 import style from "./HeaderNav.module.css";
 import { usePathname } from "next/navigation";
 
-let navItems = [
+type NavItem = {
+  name: string;
+  href: string;
+  current: boolean;
+};
+
+let navItems: NavItem[] = [];
+
+let xNavItems = [
   {
     name: "Home",
     href: "/",

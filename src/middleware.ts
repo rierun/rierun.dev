@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+const dev = process.env.NODE_ENV !== "production";
+
 function authMiddleware(request: NextRequest) {
   if (request.url.startsWith("/api")) {
     const auth = request.headers.get("authorization");
@@ -12,6 +14,12 @@ function authMiddleware(request: NextRequest) {
     const token = auth?.replace("Bearer ", "");
     if (token !== process.env.SITE_API_KEY) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+  }
+
+  if (!request.url.startsWith("/")) {
+    if (!dev) {
+      return NextResponse.redirect("/");
     }
   }
   return NextResponse.next();

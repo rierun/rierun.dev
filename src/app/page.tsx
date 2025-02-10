@@ -1,4 +1,4 @@
-import RootPage from "@/components/root/rootPage";
+import WIP from "@/components/others/wip";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <RootPage />;
+  return <WIP />;
 }
